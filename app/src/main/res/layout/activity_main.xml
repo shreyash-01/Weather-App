@@ -1,18 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/sunny_theme"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:backgroundTint="@color/sunny_theme"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/navigation_bar" />
+
+
+        <TextView
+            android:id="@+id/cityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bangalore"
+            android:textSize="35dp"
+            app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/materialToolbar"
+            app:layout_constraintVertical_bias="0.011" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/location_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/cityName"
+            app:layout_constraintEnd_toStartOf="@+id/cityName"
+            app:layout_constraintTop_toTopOf="@+id/cityName" />
+
+        <TextView
+            android:id="@+id/dateAndDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Sun 5 December 2023"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/cityName"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toStartOf="@+id/cityName"
+            app:layout_constraintTop_toBottomOf="@+id/cityName" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="350dp"
+            android:layout_height="290dp"
+            app:cardCornerRadius="20dp"
+            android:backgroundTint="@color/sunnt_secondary"
+            android:layout_marginVertical="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateAndDay" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/temperature"
+                    android:layout_width="111dp"
+                    android:layout_height="98dp"
+                    android:text="28"
+                    android:textSize="90sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.502"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.094" />
+
+                <TextView
+                    android:id="@+id/minMaxTemperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="30° / 16°"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/temperature"
+                    app:layout_constraintStart_toStartOf="@+id/temperature"
+                    app:layout_constraintTop_toBottomOf="@+id/temperature" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="sunny"
+                    android:textSize="60sp"
+                    app:layout_constraintEnd_toEndOf="@+id/minMaxTemperature"
+                    app:layout_constraintStart_toStartOf="@+id/minMaxTemperature"
+                    app:layout_constraintTop_toBottomOf="@+id/minMaxTemperature" />
+
+                <TextView
+                    android:id="@+id/feelsLikeTemperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Feels like 27°"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/description"
+                    app:layout_constraintStart_toStartOf="@+id/description"
+                    app:layout_constraintTop_toBottomOf="@+id/description" />
+
+                <TextView
+                    android:id="@+id/celsiusConstant"
+                    android:layout_width="31dp"
+                    android:layout_height="98dp"
+                    android:text="°"
+                    android:textSize="90sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/temperature"
+                    app:layout_constraintStart_toEndOf="@+id/temperature"
+                    app:layout_constraintTop_toTopOf="@+id/temperature" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

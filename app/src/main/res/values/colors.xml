@@ -6,5 +6,11 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="sunny_theme">#FFFFCD00</color>
+    <color name="clear_theme">#FF19C3FB</color>
+    <color name="snow_theme">#FFE3F4FE</color>
+    <color name="rain_theme">#FF4E7BD1</color>
+    <color name="cloudy_theme">#FF9C9C9C</color>
+    <color name="sunnt_secondary">#FFFFDF59</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
