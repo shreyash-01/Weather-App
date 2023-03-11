@@ -43,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
         windSpeedDynamic = findViewById(R.id.windSpeedDynamic);
         cityName = findViewById(R.id.cityName);
         date = findViewById(R.id.date);
-
-
     }
 
     @Override
