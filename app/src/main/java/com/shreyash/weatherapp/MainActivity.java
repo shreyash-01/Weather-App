@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+<<<<<<< HEAD
 
         MaterialToolbar toolbar = findViewById(R.id.materialToolbar);
         setSupportActionBar(toolbar);
@@ -43,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         windSpeedDynamic = findViewById(R.id.windSpeedDynamic);
         cityName = findViewById(R.id.cityName);
         date = findViewById(R.id.date);
+=======
+>>>>>>> parent of 9b8319f (establish an api request)
     }
 
     @Override
